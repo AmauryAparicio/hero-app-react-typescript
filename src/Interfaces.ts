@@ -14,3 +14,7 @@ export interface iHeroes {
   first_appearance: string;
   characters: string;
 }
+
+export interface iSearchForm {
+  searchText: string | string[];
+}

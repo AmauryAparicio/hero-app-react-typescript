@@ -4,6 +4,7 @@ import DashboardRouter from "./DashboardRouter";
 import MarvelScreen from "./../marvel/MarvelScreen";
 import HeroScreen from "./../heroes/HeroScreen";
 import DcScreen from "./../dc/DcScreen";
+import SearchScreen from "./../search/SearchScreen";
 
 const Routes: Array<iRoutes> = [
   {
@@ -25,6 +26,10 @@ const Routes: Array<iRoutes> = [
       {
         path: "/dc",
         component: DcScreen,
+      },
+      {
+        path: "/search",
+        component: SearchScreen,
       },
     ],
   },

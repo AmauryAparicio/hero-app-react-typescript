@@ -1,9 +1,10 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useMemo } from "react";
 import getHeroesByPublisher from "./../selectors/getHeroesByPublisher";
 import HeroCard from "./HeroCard";
 
 const HeroList: FunctionComponent<{ publisher: string }> = ({ publisher }) => {
-  const heroes = getHeroesByPublisher(publisher);
+  const heroes = useMemo(() => getHeroesByPublisher(publisher), [publisher]);
+
   return (
     <div className="card-columns">
       {heroes.map((hero) => (
