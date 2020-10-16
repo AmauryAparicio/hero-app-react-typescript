@@ -9,7 +9,7 @@ const HeroCard: FunctionComponent<iHeroes> = ({
   alter_ego,
   first_appearance,
   characters,
-}): JSX.Element => {
+}) => {
   return (
     <div
       className="card ms-3 animate__animated animate__zoomInDown animate__fast"

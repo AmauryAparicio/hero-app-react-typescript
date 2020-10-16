@@ -2,7 +2,7 @@ import React, { FunctionComponent, useMemo } from "react";
 import { Redirect, useHistory, useParams } from "react-router-dom";
 import getHeroById from "./../selectors/getHeroById";
 
-const HeroScreen: FunctionComponent = (): JSX.Element => {
+const HeroScreen: FunctionComponent = () => {
   const history = useHistory();
   const { heroid } = useParams<{ heroid: string }>();
   const hero = useMemo(() => getHeroById(heroid), [heroid]);

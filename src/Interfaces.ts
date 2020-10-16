@@ -1,9 +1,10 @@
-import { FunctionComponent } from "react";
+import { Dispatch, FunctionComponent } from "react";
 
 export interface iRoutes {
   path: string;
-  component: FunctionComponent<{ routes?: Array<iRoutes> }>;
+  component: FunctionComponent<any>
   routes?: Array<iRoutes>;
+  type: string
 }
 
 export interface iHeroes {
@@ -17,4 +18,23 @@ export interface iHeroes {
 
 export interface iSearchForm {
   searchText: string | string[];
+}
+
+export interface iAuthContext {
+  user: iAuthState | {},
+  dispatch: Dispatch<iAction<iLogin>>
+}
+
+export interface iAuthState{
+  logged: boolean,
+  name?: string
+}
+
+export interface iAction<T>{
+  payload?: T,
+  type: string
+}
+
+export interface iLogin{
+  name: string
 }

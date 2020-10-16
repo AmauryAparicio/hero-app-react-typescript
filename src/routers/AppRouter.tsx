@@ -1,15 +1,15 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import Routes from "./Routes";
 import RouteWithSubRoutes from "./RouteWithSubRoutes";
 
-const AppRouter: FunctionComponent = (): JSX.Element => {
+const AppRouter = () => {
   return (
     <Router>
       <div>
         <Switch>
-          {Routes.map((route, i) => (
-            <RouteWithSubRoutes key={i} {...route} />
+          {Routes.map((route) => (
+            <RouteWithSubRoutes key={route.path} {...route} />
           ))}
         </Switch>
       </div>

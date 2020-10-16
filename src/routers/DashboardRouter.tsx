@@ -1,11 +1,10 @@
-import React from "react";
-import { FunctionComponent } from "react";
-import { iRoutes } from "./../Interfaces";
+import React, { FunctionComponent } from "react";
 import Navbar from "./../ui/Navbar";
 import { Redirect, Switch } from "react-router-dom";
 import RouteWithSubRoutes from "./RouteWithSubRoutes";
+import { iRoutes } from "./../Interfaces";
 
-const DashboardRouter: FunctionComponent<{ routes?: Array<iRoutes> }> = ({
+const DashboardRouter: FunctionComponent<{ routes: Array<iRoutes> }> = ({
   routes,
 }) => {
   return (
@@ -13,8 +12,8 @@ const DashboardRouter: FunctionComponent<{ routes?: Array<iRoutes> }> = ({
       <Navbar />
       <div className="container mt-2">
         <Switch>
-          {routes?.map((route, i) => (
-            <RouteWithSubRoutes key={i} {...route} />
+          {routes.map((route) => (
+            <RouteWithSubRoutes key={route.path} {...route} />
           ))}
           <Redirect to="/marvel" />
         </Switch>

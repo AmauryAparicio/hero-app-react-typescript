@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import HeroList from "../heroes/HeroList";
 
-const DcScreen: FunctionComponent = (): JSX.Element => {
+const DcScreen: FunctionComponent = () => {
   return (
     <div>
       <h1>DC DcScreen</h1>

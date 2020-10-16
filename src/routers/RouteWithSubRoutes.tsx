@@ -2,11 +2,12 @@ import React, { FunctionComponent } from "react";
 import { Route } from "react-router-dom";
 import { iRoutes } from "./../Interfaces";
 
-const RouteWithSubRoutes: FunctionComponent<iRoutes> = (route): JSX.Element => {
+const RouteWithSubRoutes: FunctionComponent<iRoutes> = (route) => {
+  const { path, routes } = route;
   return (
     <Route
-      path={route.path}
-      render={(props) => <route.component {...props} routes={route.routes} />}
+      path={path}
+      render={(props) => <route.component {...props} routes={routes} />}
     />
   );
 };

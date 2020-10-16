@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FunctionComponent, useMemo } from "react";
+import React, { ChangeEvent, useMemo } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import HeroCard from "../heroes/HeroCard";
 import useForm from "./../hooks/useForm";
@@ -6,7 +6,7 @@ import { iHeroes, iSearchForm } from "./../Interfaces";
 import { parse } from "query-string";
 import getHeroesByName from "./../selectors/getHeroesByName";
 
-const SearchScreen: FunctionComponent = (): JSX.Element => {
+const SearchScreen = () => {
   const { push } = useHistory();
   const { search } = useLocation();
 
