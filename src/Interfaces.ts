@@ -4,7 +4,7 @@ export interface iRoutes {
   path: string;
   component: FunctionComponent<any>
   routes?: Array<iRoutes>;
-  type: string
+  type?: string
 }
 
 export interface iHeroes {

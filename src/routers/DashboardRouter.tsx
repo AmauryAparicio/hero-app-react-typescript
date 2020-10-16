@@ -4,17 +4,17 @@ import { Redirect, Switch } from "react-router-dom";
 import RouteWithSubRoutes from "./RouteWithSubRoutes";
 import { iRoutes } from "./../Interfaces";
 
-const DashboardRouter: FunctionComponent<{ routes: Array<iRoutes> }> = ({
-  routes,
-}) => {
+const DashboardRouter: FunctionComponent<{ routes: Array<iRoutes> }> = (
+  routes
+) => {
   return (
     <>
       <Navbar />
       <div className="container mt-2">
         <Switch>
-          {routes.map((route) => (
-            <RouteWithSubRoutes key={route.path} {...route} />
-          ))}
+          {routes.routes.map((route) => {
+            return <RouteWithSubRoutes key={route.path} {...route} />;
+          })}
           <Redirect to="/marvel" />
         </Switch>
       </div>

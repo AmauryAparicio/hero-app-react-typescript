@@ -8,13 +8,14 @@ const LoginScreen: FunctionComponent = () => {
   const history = useHistory();
   const { dispatch } = useContext(AuthContext) as iAuthContext;
   const handleLogin: () => void = () => {
+    const lastPath = localStorage.getItem("lastPath") || "/";
     dispatch({
       type: authActions.login,
       payload: {
         name: "Amaury",
       },
     });
-    history.replace("/");
+    history.replace(lastPath);
   };
 
   return (

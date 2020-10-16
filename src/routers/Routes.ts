@@ -23,22 +23,18 @@ const Routes: Array<iRoutes> = [
       {
         path: "/marvel",
         component: MarvelScreen,
-        type: auth
       },
       {
         path: "/hero/:heroid",
         component: HeroScreen,
-        type: auth,
       },
       {
         path: "/dc",
         component: DcScreen,
-        type: auth,
       },
       {
         path: "/search",
         component: SearchScreen,
-        type: auth,
       },
     ],
   },

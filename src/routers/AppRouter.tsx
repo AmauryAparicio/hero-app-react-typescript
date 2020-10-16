@@ -8,9 +8,9 @@ const AppRouter = () => {
     <Router>
       <div>
         <Switch>
-          {Routes.map((route) => (
-            <RouteWithSubRoutes key={route.path} {...route} />
-          ))}
+          {Routes.map((route) => {
+            return <RouteWithSubRoutes key={route.path} {...route} />;
+          })}
         </Switch>
       </div>
     </Router>

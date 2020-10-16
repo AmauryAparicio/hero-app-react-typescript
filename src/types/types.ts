@@ -6,5 +6,4 @@ export const authActions = {
 export const routesType = {
   auth: '[route] auth',
   hidden: '[route] hidden',
-  open: '[route] open'
 }
